@@ -17,9 +17,23 @@ exports.onCreateNode  = (({ actions, createNodeId, node, store, cache }) => {
         id: id
       })
 
-      // if (fileNode) {
-      //   node.productImage___NODE = fileNode.id
-      // }
+    } catch (error) {
+      console.warn('error creating node', error);
+    }
+  }
+  const processSmallProductImage = productData => {
+    let fileNode
+    try {
+      id = productData.id
+      fileNode = createRemoteFileNode({
+        url: productData.smallImg, // string that points to the URL of the image
+        parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+        createNode, // helper function in gatsby-node to generate the node
+        createNodeId, // helper function in gatsby-node to generate the node id
+        cache, // Gatsby's cache
+        store, // Gatsby's Redux store
+        id: id
+      })
 
     } catch (error) {
       console.warn('error creating node', error);
@@ -39,10 +53,6 @@ exports.onCreateNode  = (({ actions, createNodeId, node, store, cache }) => {
         id: id
       })
 
-      // if (fileNode) {
-      //   node.productImage___NODE = fileNode.id
-      // }
-
     } catch (error) {
       console.warn('error creating node', error);
     }
@@ -50,9 +60,11 @@ exports.onCreateNode  = (({ actions, createNodeId, node, store, cache }) => {
   return axios.get(url).then(async (res) => {
     const items = await Promise.all(res.data.map(async (dataItem) => {
       const lgProductImage = await processLargeProductImage(dataItem)
+      const smProductImage = await processSmallProductImage(dataItem)
       const productDetailImage = await processProductDetailImage(dataItem)
       return {
         lgProductImage,
+        smProductImage,
         productDetailImage
       }
     }))

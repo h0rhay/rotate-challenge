@@ -1,0 +1,15 @@
+@import './reset.css';
+@import './typography.scss';
+@import './vars.scss';
+@import './header.scss';
+
+body {
+ background: var(--primary-color);
+ * {
+   color: var(--text-color);
+ }
+}
+
+.none.none.none {
+  display:none;
+}

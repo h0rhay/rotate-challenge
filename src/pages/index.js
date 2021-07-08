@@ -1,6 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import Product from '../components/product'
+import ProductImage from '../components/productImage'
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -11,7 +10,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Product Page" />
       <h1>Hi people</h1>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
@@ -23,7 +22,7 @@ const IndexPage = () => {
         alt="A Gatsby astronaut"
         style={{ marginBottom: `1.45rem` }}
       />
-      <Product />
+      <ProductImage type='detail'/>
     </Layout>
   )
 }
