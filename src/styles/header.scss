@@ -14,7 +14,7 @@
     justify-content: flex-start;
     height: 100vh;
     width: 100vw;
-    padding: var(--spacer);
+    padding: var(--spacer) 5vw;
     border-right: 1px solid var(--text-color);
     transform: translate3d(-100%, 0, 0);
     transition: transform 0.5s ease-in-out;
@@ -66,7 +66,7 @@
   }
   .Mobile_Nav_Trigger {
     position: absolute;
-    top: 0;
+    top: -120px;
     right: 0;
     z-index: 1;
     width: calc(var(--spacer));
