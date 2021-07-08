@@ -2,6 +2,7 @@
 @import './typography.scss';
 @import './vars.scss';
 @import './header.scss';
+@import './product.scss';
 
 body {
  background: var(--primary-color);
@@ -10,6 +11,23 @@ body {
  }
 }
 
+.site-constrainer {
+  width:calc(100% - (var(--spacer) * 5));
+  padding:0 calc(var(--spacer) * 2.5);
+  @media(max-width: var(--break-point)) {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+
 .none.none.none {
   display:none;
+}
+
+.aesop-logo_mobile {
+  width: calc(var(--spacer) * 4.5);
+}
+
+.aesop-logo-main {
+  width: calc(var(--spacer) * 6.25);
 }

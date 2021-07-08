@@ -1,8 +1,5 @@
 .header {
   position:relative;
-  margin:0 auto;
-  width:100%;
-  max-width:90vw;
   > div {
     display: flex;
     justify-content: space-between;
@@ -30,6 +27,10 @@
         margin: 0;
       }
     }
+  }
+  .header_LgScreenNav {
+    padding-top: calc(var(--spacer) * 1.625);
+    padding-bottom: calc(var(--spacer) * 1.625);
   }
   .header_nav_block {
     display: flex;

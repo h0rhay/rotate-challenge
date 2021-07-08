@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Nav from './nav'
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { HiOutlineMenuAlt4 } from "react-icons/hi"
+import AesopLogo from '../images/aesop-logo.svg'
 
 const Header = () => {
   const [winWidth, setWinWidth] = useState(window.innerWidth)
@@ -16,7 +17,7 @@ const Header = () => {
     }
   })
   return (
-    <header className='header'>
+    <header className='header site-constrainer'>
       {
         winWidth >= 768 ?
         <div className='header_LgScreenNav'>
@@ -26,6 +27,9 @@ const Header = () => {
         : 
         <>
           <div className={`header_SmScreenNav ${mobileNavViz && `mobile_nav_visible`}`}>
+            <div>
+              <AesopLogo className='aesop-logo_mobile'/>
+            </div>
             <Nav type='primary' classes='header_nav_block' />
             <Nav type='secondary' classes='header_nav_block' />
           </div>
