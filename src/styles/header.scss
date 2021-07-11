@@ -4,6 +4,9 @@
     display: flex;
     justify-content: space-between;
   }
+  .aesop-logo-sm-wrap {
+    margin-top: var(--spacer);
+  }
   .header_SmScreenNav {
     background: var(--primary-color);
     position:fixed;
@@ -66,7 +69,7 @@
   }
   .Mobile_Nav_Trigger {
     position: absolute;
-    top: -120px;
+    top: -1rem;
     right: 0;
     z-index: 1;
     width: calc(var(--spacer));

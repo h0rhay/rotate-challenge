@@ -1,3 +1,17 @@
-.product-wrap {
+.product-layout {
   margin-top: 120px;
+  display: flex;
+  > div {
+    flex:1;
+  }
+  position:relative;
+  .aesop-logo-main {
+    position :absolute;
+    top: 0;
+    left:0;
+    @media(max-width: $breakpoint) {
+      display:none;
+    }
+  }
 }
+

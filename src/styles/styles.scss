@@ -1,6 +1,6 @@
+@import './vars.scss';
 @import './reset.css';
 @import './typography.scss';
-@import './vars.scss';
 @import './header.scss';
 @import './product.scss';
 
@@ -14,8 +14,9 @@ body {
 .site-constrainer {
   width:calc(100% - (var(--spacer) * 5));
   padding:0 calc(var(--spacer) * 2.5);
-  @media(max-width: var(--break-point)) {
+  @media(max-width: $breakpoint) {
     width: 90vw;
+    padding:0;
     margin: 0 auto;
   }
 }

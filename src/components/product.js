@@ -1,11 +1,16 @@
 import React from 'react'
 import Aesop from '../images/aesop-logo.svg'
-const Product = ({ children }) => {
+import ProductImage from './ProductImage'
+import ProductDetails from './ProductDetails';
+
+const Product = () => {
   return (
-    <article className='product-wrap'>
+    <div className='product-layout'>
       <Aesop className='aesop-logo-main' />
-      { children }
-    </article>
+      <div></div>
+      <div><ProductImage type='lg'/></div>
+      <div><ProductDetails/></div>
+    </div>
   )
 }
 

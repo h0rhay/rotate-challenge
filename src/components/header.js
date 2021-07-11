@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import Nav from './nav'
+import Nav from './Nav'
 import { HiOutlineMenuAlt4 } from "react-icons/hi"
 import AesopLogo from '../images/aesop-logo.svg'
 
@@ -26,6 +26,9 @@ const Header = () => {
         </div>
         : 
         <>
+          <div className='aesop-logo-sm-wrap'>
+            <AesopLogo className='aesop-logo_mobile'/>
+          </div>
           <div className={`header_SmScreenNav ${mobileNavViz && `mobile_nav_visible`}`}>
             <div>
               <AesopLogo className='aesop-logo_mobile'/>
