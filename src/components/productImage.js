@@ -34,11 +34,11 @@ const ProductImage = ({type}) => {
     getProductImages()
   },[products])
   return (
-    <>
+    <div className='product-image-wrap'>
       {type === 'sm' && products && smImage && <GatsbyImage image={smImage} alt='' />}
       {type === 'lg' && products && lgImage && <GatsbyImage image={lgImage} alt='' />}
       {type === 'detail' && products && detailImage && <GatsbyImage image={detailImage} alt='' />}
-    </>
+    </div>
   )
 }
 

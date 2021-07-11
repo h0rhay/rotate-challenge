@@ -33,15 +33,19 @@ const ProductDetails = ({ products }) => {
               <p className='bold'>Sizes:</p>
               <form>
                 <div className='radio-item'>
-                  <input type="radio" name="radio" id='radItemSm' value='small' onClick={() => handleClick('small')} />
+                  <input type="radio" name="radio" id='radItemSm' value='small' onClick={() => handleClick('small')} checked={productSize === 'small' ? true : false}/>
                   <label htmlFor='radItemSm'>100 ml</label>
                 </div>
                 <div className='radio-item'>
-                  <input type="radio" name="radio" id='radioItemLg' value='large' onClick={() => handleClick('large')} />
+                  <input type="radio" name="radio" id='radioItemLg' value='large' onClick={() => handleClick('large')} checked={productSize === 'large' ? true : false} />
                   <label htmlFor='radioItemLg'>200 ml</label>
                 </div>
               </form>
-              <button>Add to your cart &mdash;</button>
+              <button>Add to your cart &mdash; £{productSize === 'small'? 
+                product.sizes['small'].map(i => i.price)
+                :
+                product.sizes['large'].map(i => i.price)
+              }</button>
             </section>
           </>
         )

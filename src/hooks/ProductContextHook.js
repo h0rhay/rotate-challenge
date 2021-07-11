@@ -12,7 +12,7 @@ const defaultState = {
 const ProductContext = createContext(defaultState)
 
 const ProductContextProvider = props => {
-  const [productSize, setProductSize] = useState('')
+  const [productSize, setProductSize] = useState('small')
   const [cartItems, setCartItems] = useState('')
   const [cartOpen, setCartOpen] = useState('')
 
