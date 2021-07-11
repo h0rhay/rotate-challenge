@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
+import { ProductContext } from '../hooks/ProductContextHook'
 import Nav from './Nav'
 import { HiOutlineMenuAlt4 } from "react-icons/hi"
 import AesopLogo from '../images/aesop-logo.svg'
 
 const Header = () => {
+  const { cartItems } = useContext(ProductContext)
   const [winWidth, setWinWidth] = useState(window.innerWidth)
   const [mobileNavViz, setMobileNavViz] = useState(false)
   const toggleMobileNav = () => {
@@ -22,7 +24,14 @@ const Header = () => {
         winWidth >= 768 ?
         <div className='header_LgScreenNav'>
           <Nav type='primary' classes='header_nav_block' />
-          <Nav type='secondary' classes='header_nav_block' />
+          <div style={{'display': 'flex'}}>
+            <Nav type='secondary' classes='header_nav_block' />
+            <ul className='header_nav_block secondary'>
+              <li>
+                &nbsp;{cartItems && cartItems}
+              </li>
+            </ul>
+          </div>
         </div>
         : 
         <>

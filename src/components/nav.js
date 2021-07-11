@@ -14,7 +14,7 @@ const Nav = ({ type, classes }) => {
           navigationItems[type].map(item => {
             return (
               <li key={`${item.label}-${item.id}`}>
-                <Link to={item.link}>{item.label}</Link>
+                <Link to={item.link}>{`${item.label}`}</Link>
               </li>
             )
           })

@@ -3,8 +3,13 @@ import { ProductContext } from '../hooks/ProductContextHook'
 
 const ProductDetails = ({ products }) => {
   const { productSize, setProductSize } = useContext(ProductContext)
+  const { cartItems, setCartItems } = useContext(ProductContext)
+  const { cartValue, setCartValue } = useContext(ProductContext)
   const handleClick = (val) => {
     setProductSize(val)
+  }
+  const handleAddToCart = (val) => {
+    setCartItems(cartItems + val)
   }
   return (
     <section className='product-detail'>
@@ -12,6 +17,7 @@ const ProductDetails = ({ products }) => {
         return (
           <>
             {productSize && console.log('productSize', productSize)}
+            {/* {cartItems && console.log('cartItems', cartItems)} */}
             <div className="text-group text-group-primary">
               <h2>{product.title}</h2>
               <p></p>
@@ -41,7 +47,7 @@ const ProductDetails = ({ products }) => {
                   <label htmlFor='radioItemLg'>200 ml</label>
                 </div>
               </form>
-              <button>Add to your cart &mdash; £{productSize === 'small'? 
+              <button onClick={() => handleAddToCart(1)}>Add to your cart &mdash; £{productSize === 'small'? 
                 product.sizes['small'].map(i => i.price)
                 :
                 product.sizes['large'].map(i => i.price)

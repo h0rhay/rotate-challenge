@@ -3,8 +3,10 @@ import React, { createContext, useState } from 'react'
 const defaultState = {
   productSize: '',
   setProductSize: () => {},
-  cartItems: [],
+  cartItems: '',
   setCartItems: () => {},
+  cartValue: '',
+  setCartValue: () => {},
   cartOpen: '',
   setCartOpen: () => {}
 }
@@ -13,7 +15,8 @@ const ProductContext = createContext(defaultState)
 
 const ProductContextProvider = props => {
   const [productSize, setProductSize] = useState('small')
-  const [cartItems, setCartItems] = useState('')
+  const [cartItems, setCartItems] = useState(0)
+  const [cartValue, setCartValue] = useState('')
   const [cartOpen, setCartOpen] = useState('')
 
   return (
@@ -22,6 +25,8 @@ const ProductContextProvider = props => {
       setProductSize: setProductSize,
       cartItems,
       setCartItems: setCartItems,
+      cartValue,
+      setCartValue: setCartValue,
       cartOpen,
       setCartOpen: setCartOpen
     }}>
