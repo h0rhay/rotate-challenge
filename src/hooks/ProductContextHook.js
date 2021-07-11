@@ -9,15 +9,15 @@ const defaultState = {
   setCartOpen: () => {}
 }
 
-const GlobalContext = createContext(defaultState)
+const ProductContext = createContext(defaultState)
 
-const GlobalContextProvider = props => {
+const ProductContextProvider = props => {
   const [productSize, setProductSize] = useState('')
   const [cartItems, setCartItems] = useState('')
   const [cartOpen, setCartOpen] = useState('')
 
   return (
-    <GlobalContext.Provider value={{
+    <ProductContext.Provider value={{
       productSize,
       setProductSize: setProductSize,
       cartItems,
@@ -26,8 +26,8 @@ const GlobalContextProvider = props => {
       setCartOpen: setCartOpen
     }}>
       {props.children}
-    </GlobalContext.Provider>
+    </ProductContext.Provider>
   )
 }
 
-export { GlobalContextProvider, GlobalContext}
+export { ProductContextProvider, ProductContext}

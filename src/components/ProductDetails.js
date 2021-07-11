@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ProductContext } from '../hooks/ProductContextHook'
 
 const ProductDetails = ({ products }) => {
+  const { productSize, setProductSize } = useContext(ProductContext)
+  const handleClick = (val) => {
+    setProductSize(val)
+  }
   return (
     <section className='product-detail'>
       {products && products.map(product => {
         return (
           <>
+            {productSize && console.log('productSize', productSize)}
             <div className="text-group text-group-primary">
               <h2>{product.title}</h2>
               <p></p>
@@ -27,11 +33,11 @@ const ProductDetails = ({ products }) => {
               <p className='bold'>Sizes:</p>
               <form>
                 <div className='radio-item'>
-                  <input type="radio" name="radio" id='radItemSm' />
+                  <input type="radio" name="radio" id='radItemSm' value='small' onClick={() => handleClick('small')} />
                   <label htmlFor='radItemSm'>100 ml</label>
                 </div>
                 <div className='radio-item'>
-                  <input type="radio" name="radio" id='radioItemLg' />
+                  <input type="radio" name="radio" id='radioItemLg' value='large' onClick={() => handleClick('large')} />
                   <label htmlFor='radioItemLg'>200 ml</label>
                 </div>
               </form>
