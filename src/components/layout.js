@@ -1,7 +1,7 @@
 import * as React from "react"
+import { GlobalContextProvider } from '../hooks/useGlobalContext'
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./Header"
 
 const Layout = ({ children }) => {
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <GlobalContextProvider>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main className='site-constrainer'>
         {children}
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
       <footer className='site-constrainer'>
         © {new Date().getFullYear()}, Built with ❤️
       </footer>
-    </>
+    </GlobalContextProvider>
   )
 }
 
