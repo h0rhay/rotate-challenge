@@ -1,6 +1,10 @@
 :root {
   --primary-color: #fffef2;
+  --primary-mid: #f6f5e8;
+  --primary-dark: #eeecde;
   --text-color: #333;
+  --page-accent-dark: rgba(0, 0, 0, 0.4);
+  --page-accent-light: rgba(255, 255, 255, 0,2);
   --spacer: 1rem;
 }
 $breakpoint: 767px;

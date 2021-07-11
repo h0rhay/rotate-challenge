@@ -13,5 +13,14 @@
       display:none;
     }
   }
+  .text-group {
+    &:not(:first-of-type) {
+      padding-top: var(--spacer);
+    }
+    border-bottom: 1px solid var(--page-accent-dark);
+    &.text-group-primary {
+      border-width: 2px;
+    }
+  }
 }
 
