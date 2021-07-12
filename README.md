@@ -14,7 +14,18 @@ Tech used:
 - SCSS
 - JSON-server mock api: [**repo**](https://github.com/h0rhay/json-server-mock-api) / [**endpoint**](https://my-json-server.typicode.com/h0rhay/json-server-mock-api/)
 
+Functionality:
+- Responsive
+- Responsive nav Toggle with slide drawer
+- Change product size data, and image switching
+- Add to checkout button, increments basket
+- Dropdown Checkout (Desktop only)
+- Product & Nav Data pulled from API
+- (Setup dummy API)
+
+
 Would like to improve:
+- Polish animations
 - Testing
 - A11y
 - Theming
