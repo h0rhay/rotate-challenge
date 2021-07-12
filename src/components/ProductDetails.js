@@ -23,7 +23,7 @@ const ProductDetails = ({ products }) => {
     <section className='product-detail'>
       {products && products.map(product => {
         return (
-          <>
+          <React.Fragment key={`${product.id}-product-details`}>
             <div className="text-group text-group-primary">
               <h2>{product.title}</h2>
               <p></p>
@@ -55,7 +55,7 @@ const ProductDetails = ({ products }) => {
               </form>
               <button onClick={() => handleAddToCart(1)}>Add to your cart &mdash; £{getPrice(product)}.00</button>
             </section>
-          </>
+          </React.Fragment>
         )
       })}
     </section>

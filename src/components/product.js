@@ -14,7 +14,6 @@ const Product = () => {
   },[])
   return (
     <div className='product-layout'>
-      {productInfo && console.log('productInfo', productInfo)}
       <Aesop className='aesop-logo-main' />
       <div />
       <div>

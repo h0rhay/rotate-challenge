@@ -3,9 +3,9 @@
   George Clark Rotate Challenge
 </h1>
 
-Ready to view [**HERE**](/)
+Ready to view [**HERE**](https://rotate-aesop-product-page-challenge.surge.sh/)
 
-_A Gatsby starter using product data reproduced from an Aesop product page, and deployed as a simple JSON api._
+_A Gatsby starter using product data reproduced from an Aesop product page, and deployed as a simple JSON API._
 
 Tech used:
 - React
@@ -16,11 +16,11 @@ Tech used:
 
 Functionality:
 - Responsive
-- Responsive nav Toggle with slide drawer
+- Responsive nav toggle with slide drawer
 - Change product size data, and image switching
 - Add to checkout button, increments basket
 - Dropdown Checkout (Desktop only)
-- Product & Nav Data pulled from API
+- Product & Nav data pulled from API
 - (Setup dummy API)
 
 

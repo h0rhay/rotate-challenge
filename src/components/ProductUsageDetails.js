@@ -5,7 +5,7 @@ const ProductUsageDetails = ({ products }) => {
     <section className='product-detail'>
       {products && products.map(product => {
         return (
-          <>
+          <React.Fragment key={`${product.id}-pud`}>
             <div className="text-group text-group-primary">
               <h2>{product.usage}</h2>
               <p></p>
@@ -22,7 +22,7 @@ const ProductUsageDetails = ({ products }) => {
               <p className='bold'>Aroma</p>
               <p>{product.aroma}</p>
             </div>
-          </>
+          </React.Fragment>
         )
       })}
     </section>
