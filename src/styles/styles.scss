@@ -4,6 +4,7 @@
 @import './header.scss';
 @import './product.scss';
 @import './cart.scss';
+@import './product-usage.scss';
 
 body {
  background: var(--primary-color);
@@ -25,6 +26,15 @@ body {
     padding:0;
     margin: 0 auto;
   }
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .bold {

@@ -1,0 +1,17 @@
+.product-usage-wrap {
+  margin-top: calc(var(--spacer) * 7.5);
+  display: flex;
+  > div {
+    flex: 1;
+  }
+  @media(max-width: 959px) {
+    display:block;
+  }
+  background: var(--primary-mid);
+}
+
+.product-usage-details {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
