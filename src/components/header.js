@@ -28,7 +28,7 @@ const Header = () => {
             <Nav type='secondary' classes='header_nav_block' />
             <ul className='header_nav_block secondary'>
               <li>
-                &nbsp;{cartItems && cartItems}
+                &nbsp;{cartItems && cartItems > 0 ? cartItems : ''}
               </li>
             </ul>
           </div>

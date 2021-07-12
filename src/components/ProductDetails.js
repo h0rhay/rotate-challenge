@@ -51,7 +51,7 @@ const ProductDetails = ({ products }) => {
                 product.sizes['small'].map(i => i.price)
                 :
                 product.sizes['large'].map(i => i.price)
-              }</button>
+              }.00</button>
             </section>
           </>
         )
