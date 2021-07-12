@@ -6,6 +6,7 @@ import AesopLogo from '../images/aesop-logo.svg'
 
 const Header = () => {
   const { cartItems } = useContext(ProductContext)
+  const { cartOpen } = useContext(ProductContext)
   const [winWidth, setWinWidth] = useState(window.innerWidth)
   const [mobileNavViz, setMobileNavViz] = useState(false)
   const toggleMobileNav = () => {
@@ -19,7 +20,7 @@ const Header = () => {
     }
   })
   return (
-    <header className='header site-constrainer'>
+    <header className={`header site-constrainer`}>
       {
         winWidth >= 768 ?
         <div className='header_LgScreenNav'>

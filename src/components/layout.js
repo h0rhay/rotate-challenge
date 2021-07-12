@@ -1,8 +1,9 @@
-import * as React from "react"
+import React from "react"
 import { ProductContextProvider } from '../hooks/ProductContextHook'
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header"
+import Cart from './Cart'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <ProductContextProvider>
+      <Cart />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <main className='site-constrainer'>
         {children}

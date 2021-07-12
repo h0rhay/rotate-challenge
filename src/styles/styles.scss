@@ -3,12 +3,18 @@
 @import './typography.scss';
 @import './header.scss';
 @import './product.scss';
+@import './cart.scss';
 
 body {
  background: var(--primary-color);
  * {
    color: var(--text-color);
  }
+  margin-top:-260px;
+  transition: margin 0.5s ease-in-out;
+  &.cart-open {
+    margin-top: 0px;
+  }
 }
 
 .site-constrainer {

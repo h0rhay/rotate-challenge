@@ -16,8 +16,8 @@ const ProductContext = createContext(defaultState)
 const ProductContextProvider = props => {
   const [productSize, setProductSize] = useState('small')
   const [cartItems, setCartItems] = useState(0)
-  const [cartValue, setCartValue] = useState('')
-  const [cartOpen, setCartOpen] = useState('')
+  const [cartValue, setCartValue] = useState(0)
+  const [cartOpen, setCartOpen] = useState(false)
 
   return (
     <ProductContext.Provider value={{
