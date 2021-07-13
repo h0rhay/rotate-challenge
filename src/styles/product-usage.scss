@@ -3,14 +3,20 @@
   display: flex;
   > div {
     flex: 1;
+    &:first-of-type {
+      background: #EDEBDF;
+      display:flex;
+      justify-content: center;
+    }
   }
-  @media(max-width: 959px) {
+  @media(max-width: 799px) {
     display:block;
   }
   background: var(--primary-mid);
 }
 
 .product-usage-details {
+  padding: 2rem;
   display:flex;
   align-items: center;
   justify-content: center;

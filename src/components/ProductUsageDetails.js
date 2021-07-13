@@ -7,7 +7,7 @@ const ProductUsageDetails = ({ products }) => {
         return (
           <React.Fragment key={`${product.id}-pud`}>
             <div className="text-group text-group-primary">
-              <h2>{product.usage}</h2>
+              <h3>{product.usage}</h3>
               <p></p>
             </div>
             <div className="text-group">
